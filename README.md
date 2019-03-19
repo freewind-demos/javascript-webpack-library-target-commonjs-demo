@@ -6,6 +6,8 @@ Webpack Config "libraryTarget" "commonjs" Demo
 还会把它的内容复制到全局的`exports`对象上。所以，当我们在node下require它时，
 就能把它当作commonjs模块使用。
 
+注意：生成的bundle文件不能在html上使用，因为它用到的`exports`对象在浏览器中不存在。
+
 ![demo](./images/demo.png)
 
 如图上所选择的`exports`就是全局的exports，也就是我们通常这么用的时候的exports:
